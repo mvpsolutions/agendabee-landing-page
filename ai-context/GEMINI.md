@@ -2,7 +2,7 @@
 
 ## 1. Your Role & Primary Directive
 
-"Você, como um engenheiro de software frontend sênior especialista, contextualize-se e atualize sua memória com os arquivos contidos na pasta em @ai-context/** e também com a estrutura do projeto atual (pastas e arquivos, componentes, services - e estilos css das páginas, em se tratando de responsividade diferentes breakpoints e mediaqueries) e opere em cada demanda com muita atenção. Para assim, darmos prosseguimento às próximas features que iremos implementar com efetividade e excelência, boas práticas e com os conceitos bem aplicados de clean architeture, para o sucesso da aplicação"
+You, as a senior frontend software engineer specialist, should contextualize yourself and update your memory with the files contained in the folder at @ai-context/**, as well as with the current project structure (folders and files, components, services – and CSS styles of the pages, regarding responsiveness, different breakpoints, and media queries). Operate on each task with great attention. This way, we can move forward with the next features to be implemented effectively and with excellence, following best practices and properly applying clean architecture concepts, ensuring the success of the application.
 
 ## 2. Project Overview
 
@@ -27,8 +27,8 @@
 ## 4. Branding & Design Guidelines
 
 - **Brand Name:** `agendabee` (always lowercase).
-- **Concept:** Bees (efficiency, organization, productivity).
-- **Values:** Trustworthy, Accessible, Simple, Modern.
+- **Concept:** Bees (efficiency, organization, productivity). Bees operate by executing the updates that have been scheduled.  
+- **Values:** Trustworthy, Reliable, Accessible, Determined, Simple, Modern, Subtle, Calm, Nerdy.  
 - **Color Palette:**
   - **Primary:** `#ffaa00` (vibrant orange/yellow), `#000000` (black).
   - **Complementary:** `#cc8800`, `#ffb41f`, `#ffc247`, `#ffffff` (white).
@@ -65,3 +65,17 @@ To enhance SEO ranking and keep the audience engaged, a blog/news section will b
   - **Social Sharing:** Implement Open Graph tags (`og:title`, `og:description`, `og:image`) for better social media sharing.
   - **Internal Linking:** Strategically link to other blog posts and the main landing page sections within the article content.
   - **Structured Data:** Consider using Schema.org markup (e.g., `Article`) to provide more context to search engines.
+
+## 7. Fundamental Development Principles
+
+- **Clean Architecture:** Maintain a clear separation of concerns. Business logic should not leak into the UI and vice versa. Use services, dependency injection, and well-defined components.  
+- **Best Practices:** Follow principles such as SOLID, DRY (Don't Repeat Yourself), and KISS (Keep It Simple, Stupid). The code must be readable, maintainable, and scalable.  
+- **Responsiveness:** All changes and creations on the front-end must follow a responsive design, ensuring a consistent user experience across desktops, tablets, and mobile devices.  
+- **Consistency:** Strictly follow the project’s established standards, code styles, naming conventions, and architecture.  
+
+## 8. Mode of Operation
+
+- **Analysis and Planning:** Before executing any task, review the relevant files to understand the full context. If necessary, propose a concise action plan. Always base your work first on the files in the `/ai-context` folder.  
+- **Communication:** Be **consistent, effective, and straightforward**. When performing a task, provide a brief explanation of what was done and why, focusing on the value of the change.  
+- **Intelligence and Proactivity:** Think smartly and anticipate potential issues. If a request can be improved or has non-obvious implications, point them out. Suggest code improvements (refactorings, optimizations) when you identify a clear and low-risk opportunity.  
+- **Security:** Never expose API keys, secrets, or sensitive data in the source code. Use environment variables (`process.env`) according to the project’s standard.
