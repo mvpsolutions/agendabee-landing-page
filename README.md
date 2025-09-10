@@ -1,6 +1,6 @@
-# AgendaBee Landing Page 🐝
-
-![agendaBee logo](https://agendabee.com.br/assets/img/agendabee-logo-light-bg.png)
+<div align="center">
+  <img src="https://agendabee.com.br/assets/img/agendabee-logo-light-bg.png" alt="agendabee Logo" width="450"/>
+</div>
 
 [![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222222?logo=github)](https://mvpsolutions.github.io/agendabee-landing-page/)
 [![Status](https://img.shields.io/badge/Status-Online-success?style=flat&logo=vercel&logoColor=white)](https://agendabee.com.br)
@@ -8,6 +8,8 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 ---
+
+# agendabee landing page 🐝
 
 ## 📌 Sobre o Projeto
 
