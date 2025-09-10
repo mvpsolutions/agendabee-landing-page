@@ -1,6 +1,32 @@
 // Landing Page JavaScript
 document.addEventListener('DOMContentLoaded', function () {
 
+  // --- ONE-TIME REDIRECT FOR NEW VISITORS --- //
+  (function () {
+    const path = window.location.pathname;
+    const savedLang = localStorage.getItem('language');
+    // Redirect only if on the root page and language isn't saved
+    if ((path === '/' || path === '/index.html') && !savedLang) {
+      const browserLang = navigator.language.split('-')[0];
+      if (browserLang === 'en' || browserLang === 'es') {
+        // Save the preference so it doesn't redirect again
+        localStorage.setItem('language', browserLang);
+        window.location.replace(`/${browserLang}/`);
+      } else {
+        // For other languages (like 'pt'), save the preference so we don't check again
+        localStorage.setItem('language', 'pt');
+      }
+    }
+  })();
+
+  // --- DYNAMIC YEAR IN FOOTER --- //
+  (function () {
+    const yearSpan = document.getElementById('footer-year-text');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  })();
+
   // Header scroll effect
   const header = document.querySelector('.header');
   let lastScrollY = window.scrollY;
@@ -94,23 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileMenuToggle.addEventListener('click', (e) => {
       e.stopPropagation(); // Prevent the document click listener from firing immediately
       const isActive = navMenu.classList.toggle('active');
-      if (isActive) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-      } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-      }
+      icon.className = isActive ? 'fas fa-times' : 'fas fa-bars';
     });
 
-    // Close mobile menu when an action is taken inside
     navMenu.addEventListener('click', (e) => {
-      // Close if a nav-link is clicked
-      if (e.target.closest('.nav-link')) {
-        closeMobileMenu();
-      }
-      // Close if a language button *from the options* is clicked
-      if (e.target.closest('.language-switcher-options .language-button')) {
+      if (e.target.closest('.nav-link, .language-switcher-options .language-button')) {
         closeMobileMenu();
       }
     });
@@ -134,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
@@ -150,8 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // CTA button tracking (for analytics)
   const ctaButtons = document.querySelectorAll('.btn-primary');
   ctaButtons.forEach(button => {
-    button.addEventListener('click', function (e) {
-      // Track CTA clicks
+    button.addEventListener('click', function () {
       const buttonText = this.textContent.trim();
       const section = this.closest('section')?.className || 'unknown';
 
@@ -163,61 +177,10 @@ document.addEventListener('DOMContentLoaded', function () {
           'page_location': window.location.href
         });
       }
-
-      // Console log for debugging
-      console.log('CTA clicked:', {
-        text: buttonText,
-        section: section,
-        url: this.href
-      });
     });
   });
 
-  // Form validation (if forms are added later)
-  const forms = document.querySelectorAll('form');
-  forms.forEach(form => {
-    form.addEventListener('submit', function (e) {
-      const requiredFields = form.querySelectorAll('[required]');
-      let isValid = true;
-
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          isValid = false;
-          field.classList.add('error');
-
-          // Remove error class after user starts typing
-          field.addEventListener('input', function () {
-            this.classList.remove('error');
-          }, { once: true });
-        }
-      });
-
-      if (!isValid) {
-        e.preventDefault();
-
-        // Show error message
-        let errorMsg = form.querySelector('.error-message');
-        if (!errorMsg) {
-          errorMsg = document.createElement('div');
-          errorMsg.className = 'error-message';
-          errorMsg.style.color = 'var(--danger)';
-          errorMsg.style.marginTop = '1rem';
-          errorMsg.style.textAlign = 'center';
-          form.appendChild(errorMsg);
-        }
-        errorMsg.textContent = 'Por favor, preencha todos os campos obrigatórios.';
-
-        // Remove error message after 5 seconds
-        setTimeout(() => {
-          if (errorMsg.parentNode) {
-            errorMsg.remove();
-          }
-        }, 5000);
-      }
-    });
-  });
-
-  // Lazy loading for images (performance optimization)
+  // Lazy loading for images
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -269,191 +232,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Scroll to top functionality
   scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  // Performance monitoring
-  if ('performance' in window) {
-    window.addEventListener('load', () => {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      console.log(`Page loaded in ${loadTime}ms`);
-
-      // Report to analytics if available
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'page_load_time', {
-          'value': loadTime,
-          'custom_parameter': 'landing_page'
-        });
-      }
-    });
-  }
-
-  // Add hover effects for interactive elements
-  const interactiveElements = document.querySelectorAll('.btn, .feature-card, .problem-card, .testimonial-card');
-  interactiveElements.forEach(element => {
-    element.addEventListener('mouseenter', function () {
-      this.style.transform = 'translateY(-2px)';
-    });
-
-    element.addEventListener('mouseleave', function () {
-      this.style.transform = 'translateY(0)';
-    });
-  });
-
-  // --- I18N (TRANSLATION) --- //
-  const translations = {};
-  const defaultLang = 'pt';
-  const langOptions = {
-    pt: '🇧🇷 PT',
-    en: '🇺🇸 EN',
-    es: '🇪🇸 ES'
-  };
-
-  // ONE-TIME REDIRECT FOR NEW VISITORS
-  const path = window.location.pathname;
-  const savedLang = localStorage.getItem('language');
-  if ((path === '/' || path === '/index.html') && !savedLang) {
-    const browserLang = navigator.language.split('-')[0];
-    if (browserLang === 'en' || browserLang === 'es') {
-      window.location.replace(`/${browserLang}/`);
-      return; // Stop script execution until new page loads
-    }
-  }
-
+  // Language switcher dropdown
   const languageSwitcher = document.querySelector('.language-switcher');
-  const activeLangContainer = document.querySelector('.language-switcher-active');
-  const langOptionsContainer = document.querySelector('.language-switcher-options');
-
-  async function fetchTranslations(lang) {
-    try {
-      const path = window.location.pathname;
-      const basePath = (path.startsWith('/en') || path.startsWith('/es')) ? '../' : './';
-      const response = await fetch(`${basePath}assets/locales/${lang}.json`);
-      if (!response.ok) {
-        throw new Error(`Could not load ${lang}.json`);
-      }
-      translations[lang] = await response.json();
-    } catch (error) {
-      console.error(error);
-      if (lang !== defaultLang) {
-        await fetchTranslations(defaultLang); // Fallback to default language
-      }
-    }
-  }
-
-  function applyTranslations(lang) {
-    const langData = translations[lang];
-    if (!langData) return;
-
-    document.querySelectorAll('[data-translate]').forEach(element => {
-      const key = element.getAttribute('data-translate');
-      if (langData[key]) {
-        let translatedText = langData[key];
-        // Handle year placeholder
-        if (translatedText.includes('{year}')) {
-          translatedText = translatedText.replace('{year}', new Date().getFullYear());
-        }
-
-        if (element.tagName === 'META' && element.name === 'description') {
-          element.content = translatedText;
-        } else if (element.tagName === 'TITLE') {
-          element.textContent = translatedText;
-        } else {
-          element.innerHTML = translatedText;
-        }
-      }
+  if (languageSwitcher) {
+    const activeLangContainer = languageSwitcher.querySelector('.language-switcher-active');
+    activeLangContainer.addEventListener('click', (e) => {
+      e.stopPropagation();
+      languageSwitcher.classList.toggle('open');
     });
 
-    document.documentElement.lang = lang.split('-')[0];
-  }
-
-  function updateLanguageSwitcherUI(currentLang) {
-    // Update active button
-    activeLangContainer.innerHTML = `<button class="language-button active" data-lang="${currentLang}">${langOptions[currentLang]}</button>`;
-
-    // Update options
-    langOptionsContainer.innerHTML = '';
-    Object.keys(langOptions).forEach(lang => {
-      if (lang !== currentLang) {
-        let href = '';
-        // Check if the current page is a language sub-page
-        const isSubPage = window.location.pathname.startsWith('/en') || window.location.pathname.startsWith('/es');
-
-        if (lang === 'pt') {
-          href = isSubPage ? '../' : './';
-        } else {
-          href = isSubPage ? `../${lang}/` : `${lang}/`;
-        }
-
-        langOptionsContainer.innerHTML += `<a href="${href}" class="language-button" data-lang="${lang}">${langOptions[lang]}</a>`;
+    document.addEventListener('click', (event) => {
+      if (!languageSwitcher.contains(event.target)) {
+        languageSwitcher.classList.remove('open');
       }
     });
   }
-
-  async function setLanguage(lang) {
-    if (!translations[lang]) {
-      await fetchTranslations(lang);
-    }
-    applyTranslations(lang);
-    localStorage.setItem('language', lang); // Always update localStorage to the language of the current page
-    updateLanguageSwitcherUI(lang);
-  }
-
-  activeLangContainer.addEventListener('click', (e) => {
-    languageSwitcher.classList.toggle('open');
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener('click', (event) => {
-    if (!languageSwitcher.contains(event.target)) {
-      languageSwitcher.classList.remove('open');
-    }
-  });
-
-  function getLanguageFromPath() {
-    const path = window.location.pathname;
-    if (path.startsWith('/en')) return 'en';
-    if (path.startsWith('/es')) return 'es';
-    return 'pt';
-  }
-
-  // Initialize translation on page load
-  const langToLoad = getLanguageFromPath();
-  setLanguage(langToLoad);
-
 });
 
 // Utility functions
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
+window.LandingPageUtils = {
+  debounce: (func, wait) => {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
       clearTimeout(timeout);
-      func(...args);
+      timeout = setTimeout(later, wait);
     };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-function throttle(func, limit) {
-  let inThrottle;
-  return function () {
-    const args = arguments;
-    const context = this;
-    if (!inThrottle) {
-      func.apply(context, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+  },
+  throttle: (func, limit) => {
+    let inThrottle;
+    return function () {
+      const args = arguments;
+      const context = this;
+      if (!inThrottle) {
+        func.apply(context, args);
+        inThrottle = true;
+        setTimeout(() => inThrottle = false, limit);
+      }
     }
   }
-}
-
-// Export functions for potential use in other scripts
-window.LandingPageUtils = {
-  debounce,
-  throttle
 };
