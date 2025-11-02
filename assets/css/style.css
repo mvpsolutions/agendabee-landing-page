@@ -876,6 +876,10 @@ footer .logo-text {
   margin: 0;
 }
 
+.footer-bottom .img-partner {
+  width: 110px;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
