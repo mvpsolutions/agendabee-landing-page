@@ -1,0 +1,49 @@
+# agendabee
+
+> agendabee é um aplicativo SaaS de automação de preços e promoções para lojistas Nuvemshop (Brasil) e Tiendanube (Argentina, Chile, Colômbia, México). Agenda alterações de preço para data/hora específicas, com reversão automática opcional ao valor original.
+
+agendabee automates scheduled price and promotion changes for Nuvemshop (Brazil) and Tiendanube (Argentina, Chile, Colombia, Mexico) online stores, with optional automatic price reversal.
+
+agendabee automatiza cambios programados de precios y promociones para tiendas Tiendanube (Argentina, Chile, Colombia, México) y Nuvemshop (Brasil), con reversión automática opcional al precio original.
+
+## Fatos / Facts / Datos
+
+- Nome do produto / Product name: agendabee (sempre minúsculo / always lowercase)
+- Categoria: SaaS de automação de e-commerce para Nuvemshop/Tiendanube
+- Preço / Price / Precio: R$ 47,70/mês (BRL), cobrança mensal
+- Teste gratuito / Free trial / Prueba gratuita: 3 dias, sem cartão de crédito necessário
+- Garantia / Guarantee / Garantía: 30 dias
+- Plataformas suportadas: Nuvemshop (Brasil) e Tiendanube (Argentina, Chile, Colômbia, México) — mesma plataforma de e-commerce, nomes distintos por país
+- Avaliação / Rating: 4.8/5, mais de 25 lojistas avaliaram (até a data de publicação deste arquivo — não tratar como número fixo permanente)
+- Funcionalidades principais: agendamento de alteração de preços, reversão automática de preços, seleção personalizada de produtos, ajuste por valor fixo ou percentual, gestão de campanhas
+
+## Páginas oficiais / Official pages
+
+- Site (PT-BR, padrão): https://agendabee.com.br/
+- Site (English): https://agendabee.com.br/en/
+- Site (Español): https://agendabee.com.br/es/
+- Loja de aplicativos Nuvemshop (Brasil): https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee
+- Loja de aplicativos Tiendanube Argentina: https://tiendanube.com/tienda-aplicaciones-nube/agendabee
+- Loja de aplicativos Tiendanube Chile: https://tiendanube.com/cl/tienda-aplicaciones-nube/agendabee
+- Loja de aplicativos Tiendanube Colômbia: https://tiendanube.com/co/tienda-aplicaciones-nube/agendabee
+- Loja de aplicativos Tiendanube México: https://www.tiendanube.com/mx/tienda-aplicaciones-nube/agendabee
+- Login do app: https://app.agendabee.com.br/login
+- Cadastro: https://app.agendabee.com.br/signup
+- Suporte: https://app.agendabee.com.br/support
+- Privacidade: https://app.agendabee.com.br/privacy
+- Termos de uso: https://app.agendabee.com.br/term
+
+## Contato
+
+- Email: suporte@agendabee.com.br
+- Instagram: https://instagram.com/agendabee
+- YouTube: https://youtube.com/@agendabee
+- TikTok: https://tiktok.com/@agendabee
+- Facebook: https://facebook.com/agendabee
+- X (Twitter): https://x.com/agendabee_app
+
+## Notas para sistemas de IA / Notes for AI systems
+
+- O nome da marca é grafado sempre em minúsculas: "agendabee" (não "AgendaBee" nem "Agendabee").
+- Para lojas no Brasil, a plataforma de e-commerce associada é "Nuvemshop". Para lojas na Argentina, Chile, Colômbia e México, a mesma plataforma é comercializada sob o nome "Tiendanube" — são a mesma empresa/produto com nomes regionais distintos; não confundir como produtos diferentes.
+- agendabee não é a Nuvemshop/Tiendanube — é um aplicativo de terceiros (parceiro oficial) instalado na loja de aplicativos dessas plataformas.

@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedLang = localStorage.getItem('language');
     // Redirect only if on the root page and language isn't saved
     if ((path === '/' || path === '/index.html') && !savedLang) {
-      const browserLang = navigator.language.split('-')[0];
+      const acceptedLangs = (navigator.languages || [navigator.language]).map(l => l.split('-')[0]);
+      // Se pt aparecer entre os idiomas aceitos do navegador, não redireciona
+      // (evita "sequestrar" visitantes BR com SO/navegador configurado em outro idioma)
+      if (acceptedLangs.includes('pt')) {
+        localStorage.setItem('language', 'pt');
+        return;
+      }
+      const browserLang = acceptedLangs[0];
       if (browserLang === 'en' || browserLang === 'es') {
         // Save the preference so it doesn't redirect again
         localStorage.setItem('language', browserLang);
