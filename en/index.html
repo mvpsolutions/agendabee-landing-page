@@ -62,97 +62,121 @@
     <meta name="facebook-domain-verification" content="08nhn22tufmp7ervvsktnukexbearo" />
 
     <!-- Schema.org JSON-LD -->
-    <script>
-        (function () {
-            const schemaScript = document.createElement('script');
-            schemaScript.type = "application/ld+json";
-            schemaScript.text = JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": ["SoftwareApplication", "Product"],
-                "name": "agendabee",
-                "alternateName": ["AgendaBee", "Agendabee", "AGENDA BEE", "agenda bee", "agendaBee", "app agendabee"],
-                "applicationCategory": "BusinessApplication",
-                "applicationSubCategory": "E-commerce Automation",
-                "operatingSystem": "Web",
-                "softwareVersion": "1.0.0",
-                "applicationSuite": "Nuvemshop Apps",
-                "url": "https://agendabee.com.br/en/",
-                "sku": "AGB-APP-001",
-                "category": "E-commerce SaaS",
-                "image": "https://firebasestorage.googleapis.com/v0/b/agendabee-prd.appspot.com/o/agendabee-social.jpg?alt=media&token=a600adec-0064-4c1b-a0ce-29f1292def31",
-                "screenshot": "https://firebasestorage.googleapis.com/v0/b/agendabee-prd.appspot.com/o/screenshot-agendabee.png?alt=media&token=2d611bd8-e47c-4c24-8a78-e07b6f359d17",
-                "downloadUrl": "https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee",
-                "featureList": [
-                    "Scheduled price updates",
-                    "Schedule with or without price reversal (restore original value)",
-                    "Select products individually",
-                    "Modify variant prices (regular and promotional) individually or by percentage for all at once",
-                    "Simple campaign management",
-                    "Automatic scheduled execution"
-                ],
-                "offers": [
-                    {
-                        "@type": "Offer",
-                        "name": "Monthly Subscription",
-                        "url": "https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee",
-                        "priceCurrency": "BRL",
-                        "price": "47.70",
-                        "availability": "https://schema.org/InStock",
-                        "itemCondition": "https://schema.org/NewCondition",
-                        "priceValidUntil": "2026-12-31"
-                    },
-                    {
-                        "@type": "Offer",
-                        "name": "Free Trial",
-                        "url": "https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee",
-                        "priceCurrency": "BRL",
-                        "price": "0",
-                        "availability": "https://schema.org/InStock",
-                        "itemCondition": "https://schema.org/NewCondition",
-                        "eligibleTransactionVolume": { "@type": "PriceSpecification", "price": "0", "priceCurrency": "BRL", "valueAddedTaxIncluded": true },
-                        "eligibleDuration": { "@type": "Duration", "name": "3 days", "duration": "P3D" }
-                    }
-                ],
-                "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "25" },
-                "review": [
-                    {
-                        "@type": "Review",
-                        "author": { "@type": "Person", "name": "Nuvemshop Merchant" },
-                        "datePublished": "2024-04-22",
-                        "reviewBody": "agendabee made managing my store’s pricing much easier. Promotions are now automated and error-free.",
-                        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-                    },
-                    {
-                        "@type": "Review",
-                        "author": { "@type": "Person", "name": "Stone Vix" },
-                        "datePublished": "2025-01-15",
-                        "reviewBody": "We love it! Everything is simple and clean, just a few steps, and it makes it easy to manage price changes across many products. Started simple, but with the new features it’s really good. Great job and thank you!",
-                        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
-                    }
-                ],
-                "hasPart": [
-                    { "@type": "SoftwareApplication", "inLanguage": "pt-BR", "name": "agendabee", "url": "https://agendabee.com.br/", "description": "O agendabee é um aplicativo SaaS para lojistas da Nuvemshop. Ele automatiza atualização de preços e promoções, permitindo agendar alterações em data e hora específicas, simplificando a gestão da loja virtual e aumentando as vendas." },
-                    { "@type": "SoftwareApplication", "inLanguage": "en", "name": "agendabee", "url": "https://agendabee.com.br/en/", "description": "agendabee is a SaaS application for Nuvemshop merchants. It automates price and promotion updates, allowing you to schedule changes at specific dates and times, making store management easier and boosting sales." },
-                    { "@type": "SoftwareApplication", "inLanguage": "es", "name": "agendabee", "url": "https://agendabee.com.br/es/", "description": "agendabee es una aplicación SaaS para comerciantes de Tiendanube. Automatiza la actualización de precios y promociones, permitiendo programar cambios en fechas y horas específicas, simplificando la gestión de la tienda virtual y aumentando las ventas." }
-                ],
-                "publisher": {
-                    "@type": "Organization",
-                    "name": "agendabee",
-                    "url": "https://agendabee.com.br",
-                    "logo": { "@type": "ImageObject", "url": "https://agendabee.com.br/assets/img/agendabee-icon.png" },
-                    "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Support", "email": "suporte@agendabee.com.br", "availableLanguage": ["pt-BR", "en", "es"] },
-                    "sameAs": [
-                        "https://facebook.com/agendabee",
-                        "https://instagram.com/agendabee",
-                        "https://x.com/agendabee_app",
-                        "https://youtube.com/@agendabee",
-                        "https://tiktok.com/@agendabee",
-                        "https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee"
-                    ]
-                }
-            });
-            document.head.appendChild(schemaScript);
-        })();
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["SoftwareApplication", "Product"],
+        "name": "agendabee",
+        "alternateName": ["AgendaBee", "Agendabee", "AGENDA BEE", "agenda bee", "agendaBee", "app agendabee"],
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "E-commerce Automation",
+        "operatingSystem": "Web",
+        "softwareVersion": "1.0.0",
+        "applicationSuite": "Nuvemshop Apps",
+        "url": "https://agendabee.com.br/en/",
+        "sku": "AGB-APP-001",
+        "category": "E-commerce SaaS",
+        "image": "https://firebasestorage.googleapis.com/v0/b/agendabee-prd.appspot.com/o/agendabee-social.jpg?alt=media&token=a600adec-0064-4c1b-a0ce-29f1292def31",
+        "screenshot": "https://firebasestorage.googleapis.com/v0/b/agendabee-prd.appspot.com/o/screenshot-agendabee.png?alt=media&token=2d611bd8-e47c-4c24-8a78-e07b6f359d17",
+        "downloadUrl": "https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee",
+        "featureList": [
+            "Scheduled price updates",
+            "Schedule with or without price reversal (restore original value)",
+            "Select products individually",
+            "Modify variant prices (regular and promotional) individually or by percentage for all at once",
+            "Simple campaign management",
+            "Automatic scheduled execution"
+        ],
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Monthly Subscription",
+                "url": "https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee",
+                "priceCurrency": "BRL",
+                "price": "47.70",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition",
+                "priceValidUntil": "2026-12-31"
+            },
+            {
+                "@type": "Offer",
+                "name": "Free Trial",
+                "url": "https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee",
+                "priceCurrency": "BRL",
+                "price": "0",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition",
+                "eligibleTransactionVolume": { "@type": "PriceSpecification", "price": "0", "priceCurrency": "BRL", "valueAddedTaxIncluded": true },
+                "eligibleDuration": { "@type": "Duration", "name": "3 days", "duration": "P3D" }
+            }
+        ],
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "25" },
+        "review": [
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Nuvemshop Merchant" },
+                "datePublished": "2024-04-22",
+                "reviewBody": "agendabee made managing my store’s pricing much easier. Promotions are now automated and error-free.",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Stone Vix" },
+                "datePublished": "2025-01-15",
+                "reviewBody": "We love it! Everything is simple and clean, just a few steps, and it makes it easy to manage price changes across many products. Started simple, but with the new features it’s really good. Great job and thank you!",
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+            }
+        ],
+        "hasPart": [
+            { "@type": "SoftwareApplication", "inLanguage": "pt-BR", "name": "agendabee", "url": "https://agendabee.com.br/", "description": "O agendabee é um aplicativo SaaS para lojistas da Nuvemshop. Ele automatiza atualização de preços e promoções, permitindo agendar alterações em data e hora específicas, simplificando a gestão da loja virtual e aumentando as vendas." },
+            { "@type": "SoftwareApplication", "inLanguage": "en", "name": "agendabee", "url": "https://agendabee.com.br/en/", "description": "agendabee is a SaaS application for Nuvemshop merchants. It automates price and promotion updates, allowing you to schedule changes at specific dates and times, making store management easier and boosting sales." },
+            { "@type": "SoftwareApplication", "inLanguage": "es", "name": "agendabee", "url": "https://agendabee.com.br/es/", "description": "agendabee es una aplicación SaaS para comerciantes de Tiendanube. Automatiza la actualización de precios y promociones, permitiendo programar cambios en fechas y horas específicas, simplificando la gestión de la tienda virtual y aumentando las ventas." }
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "agendabee",
+            "url": "https://agendabee.com.br",
+            "logo": { "@type": "ImageObject", "url": "https://agendabee.com.br/assets/img/agendabee-icon.png" },
+            "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Support", "email": "suporte@agendabee.com.br", "availableLanguage": ["pt-BR", "en", "es"] },
+            "sameAs": [
+                "https://facebook.com/agendabee",
+                "https://instagram.com/agendabee",
+                "https://x.com/agendabee_app",
+                "https://youtube.com/@agendabee",
+                "https://tiktok.com/@agendabee",
+                "https://nuvemshop.com.br/loja-aplicativos-nuvem/agendabee"
+            ]
+        }
+    }
+    </script>
+
+    <!-- FAQPage JSON-LD (GEO/AEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "How does the free trial work?", "acceptedAnswer": { "@type": "Answer", "text": "You can use all of agendabee's features for 3 full days at no cost. No credit card is required to get started." } },
+            { "@type": "Question", "name": "Does agendabee work with any Nuvemshop store?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! agendabee is compatible with all stores on the Nuvemshop platform, regardless of the plan or theme used." } },
+            { "@type": "Question", "name": "Can I cancel at any time?", "acceptedAnswer": { "@type": "Answer", "text": "Of course! There is no lock-in. You can cancel your subscription at any time directly in your account." } },
+            { "@type": "Question", "name": "What if I need help?", "acceptedAnswer": { "@type": "Answer", "text": "We offer full support via email. Our team is always ready to help you get the most out of agendabee." } }
+        ]
+    }
+    </script>
+
+    <!-- HowTo JSON-LD (GEO/AEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How it works in 3 simple steps",
+        "description": "Set up your schedule and let agendabee work for you",
+        "step": [
+            { "@type": "HowToStep", "name": "Set Date and Time", "text": "Define a title and when the change should happen. If you prefer, there is also an option for automatic reversion." },
+            { "@type": "HowToStep", "name": "Select Products", "text": "Choose which products will have their prices updated. A simple and intuitive experience, with three different types of selection." },
+            { "@type": "HowToStep", "name": "Enter New Values", "text": "Update prices your way: adjust each product or apply a percentage to all at once." }
+        ]
+    }
     </script>
 
     <!-- Meta Pixel Code -->
