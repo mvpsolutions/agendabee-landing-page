@@ -651,6 +651,15 @@ footer .logo-text {
   background-color: var(--gray-100);
 }
 
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .pricing-card {
   max-width: 500px;
   margin: 0 auto;
@@ -660,6 +669,49 @@ footer .logo-text {
   box-shadow: var(--box-shadow-xl);
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-grid .pricing-card {
+  max-width: none;
+  margin: 0;
+}
+
+.pricing-card--featured {
+  border: 2px solid var(--primary-color);
+  box-shadow: var(--box-shadow-xl), 0 0 0 4px rgba(255, 170, 0, 0.15);
+}
+
+@media (min-width: 901px) {
+  .pricing-card--featured {
+    transform: scale(1.06);
+  }
+}
+
+.pricing-card .pricing-features {
+  flex-grow: 1;
+}
+
+.plan-badge {
+  position: absolute;
+  top: -0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0.35rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.pricing-card h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: 0.5rem;
 }
 
 .pricing-header {
@@ -1047,6 +1099,17 @@ footer .logo-text {
 
   .amount {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .pricing-card--featured {
+    order: -1;
   }
 }
 

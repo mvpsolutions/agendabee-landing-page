@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>agendabee | automatiza la actualización de precios y promociones</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico" alt="agendabee" />
+    <title>agendabee | Programa precios y promociones en Tiendanube</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico" />
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <!-- Google Fonts -->
@@ -37,7 +37,7 @@
 
     <!-- Meta tags -->
     <meta name="description"
-        content="Automatiza precios y promociones en tu tienda Tiendanube. Programa cambios en fechas y horas específicas y aumenta tus ventas sin esfuerzo.">
+        content="App de Tiendanube que programa y revierte precios y promociones en la fecha y hora exactas. Configúralo una vez, las bees hacen el resto. Empieza gratis.">
     <meta name="keywords"
         content="agendabee, programar promociones Tiendanube, promociones programadas, estrategia de precios, herramienta para comerciantes, gestión de precios, gestión de promociones, organizar promociones, automatizar precios ecommerce, automatizar tienda online, software para comerciantes, app para comerciantes, aplicación agendabee, actualizar precios automáticamente, aplicación para actualizar precios, app agendabee tiendanube, programar cambio de precios, aplicaciones Tiendanube, marketplace Tiendanube, promociones ecommerce, campañas de ventas, promociones black friday, agendabee tiendanube, utilidades tiendanube, comerciantes tiendanube, automatizar promociones, tienda de apps tiendanube">
     <meta name="subject" content="agendabee | Automatiza promociones y precios en tu Tiendanube">
@@ -48,17 +48,26 @@
     <meta name="url" content="https://agendabee.com.br/es/">
     <meta property="og:url" content="https://agendabee.com.br/es/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="agendabee | app que automatiza las actualizaciones de precios de tu tienda" />
+    <meta property="og:site_name" content="agendabee" />
+    <meta property="og:locale" content="es_LA" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="agendabee | Programa precios y promociones en Tiendanube" />
     <meta property="og:description"
-        content="Automatiza precios y promociones en tu tienda Tiendanube. Programa cambios en fechas y horas específicas y aumenta tus ventas sin esfuerzo." />
-    <meta property="og:image" alt="agendabee"
+        content="App de Tiendanube que programa y revierte precios y promociones en la fecha y hora exactas. Configúralo una vez, las bees hacen el resto. Empieza gratis." />
+    <meta property="og:image"
         content="https://firebasestorage.googleapis.com/v0/b/agendabee-prd.appspot.com/o/agendabee-social.jpg?alt=media&token=a600adec-0064-4c1b-a0ce-29f1292def31" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="839" />
+    <meta property="og:image:height" content="485" />
+    <meta property="og:image:alt" content="Logo de agendabee" />
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="agendabee | automatiza la actualización de precios y promociones">
+    <meta name="twitter:title" content="agendabee | Programa precios y promociones en Tiendanube">
     <meta name="twitter:description"
-        content="Automatiza precios y promociones en tu tienda Tiendanube. Programa cambios en fechas y horas específicas y aumenta tus ventas sin esfuerzo.">
+        content="App de Tiendanube que programa y revierte precios y promociones en la fecha y hora exactas. Configúralo una vez, las bees hacen el resto. Empieza gratis.">
     <meta name="twitter:image"
         content="https://firebasestorage.googleapis.com/v0/b/agendabee-prd.appspot.com/o/agendabee-social.jpg?alt=media&token=a600adec-0064-4c1b-a0ce-29f1292def31">
+    <meta name="twitter:image:alt" content="Logo de agendabee">
     <meta name="facebook-domain-verification" content="08nhn22tufmp7ervvsktnukexbearo" />
 
     <!-- Schema.org JSON-LD -->
@@ -66,6 +75,7 @@
     {
         "@context": "https://schema.org",
         "@type": ["SoftwareApplication", "Product"],
+        "@id": "https://agendabee.com.br/#software",
         "name": "agendabee",
         "alternateName": ["AgendaBee", "Agendabee", "AGENDA BEE", "agenda bee", "agendaBee", "app agendabee"],
         "applicationCategory": "BusinessApplication",
@@ -90,7 +100,19 @@
         "offers": [
             {
                 "@type": "Offer",
-                "name": "Suscripción Mensual",
+                "name": "Bee Free",
+                "description": "2 programaciones de bienvenida, sin fecha de vencimiento. Sin tarjeta de crédito.",
+                "url": "https://app.agendabee.com.br/signup",
+                "priceCurrency": "BRL",
+                "price": "0",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/NewCondition",
+                "priceValidUntil": "2026-12-31"
+            },
+            {
+                "@type": "Offer",
+                "name": "Bee Pro",
+                "description": "7 programaciones incluidas por mes.",
                 "url": "https://app.agendabee.com.br/signup",
                 "priceCurrency": "BRL",
                 "price": "47.70",
@@ -100,14 +122,14 @@
             },
             {
                 "@type": "Offer",
-                "name": "Prueba Gratuita",
+                "name": "Bee Max",
+                "description": "Programaciones ilimitadas.",
                 "url": "https://app.agendabee.com.br/signup",
                 "priceCurrency": "BRL",
-                "price": "0",
+                "price": "77.70",
                 "availability": "https://schema.org/InStock",
                 "itemCondition": "https://schema.org/NewCondition",
-                "eligibleTransactionVolume": { "@type": "PriceSpecification", "price": "0", "priceCurrency": "BRL", "valueAddedTaxIncluded": true },
-                "eligibleDuration": { "@type": "Duration", "name": "3 días", "duration": "P3D" }
+                "priceValidUntil": "2026-12-31"
             }
         ],
         "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "25" },
@@ -134,6 +156,8 @@
         ],
         "publisher": {
             "@type": "Organization",
+            "@id": "https://agendabee.com.br/#organization",
+            "areaServed": ["BR", "AR", "CL", "CO", "MX"],
             "name": "agendabee",
             "url": "https://agendabee.com.br",
             "logo": { "@type": "ImageObject", "url": "https://agendabee.com.br/assets/img/agendabee-icon.png" },
@@ -159,7 +183,7 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            { "@type": "Question", "name": "¿Cómo funciona la prueba gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "Puedes usar todas las funciones de agendabee durante 3 días completos, sin costo alguno. No se requiere tarjeta de crédito para comenzar." } },
+            { "@type": "Question", "name": "¿Cómo funciona la prueba gratuita?", "acceptedAnswer": { "@type": "Answer", "text": "El plan Bee Free te da 2 programaciones de bienvenida, sin fecha de vencimiento y sin necesidad de tarjeta de crédito. Si necesitas más volumen, los planes Bee Pro (R$ 47,70/mes, 7 programaciones incluidas) y Bee Max (R$ 77,70/mes, programaciones ilimitadas) están disponibles." } },
             { "@type": "Question", "name": "¿agendabee funciona con cualquier tienda Tiendanube?", "acceptedAnswer": { "@type": "Answer", "text": "¡Sí! agendabee es compatible con todas las tiendas de la plataforma Tiendanube, independientemente del plan o tema utilizado." } },
             { "@type": "Question", "name": "¿Puedo cancelar en cualquier momento?", "acceptedAnswer": { "@type": "Answer", "text": "¡Claro! No hay permanencia. Puedes cancelar tu suscripción en cualquier momento directamente en tu cuenta." } },
             { "@type": "Question", "name": "¿Y si necesito ayuda?", "acceptedAnswer": { "@type": "Answer", "text": "Ofrecemos soporte completo por correo electrónico. Nuestro equipo siempre está listo para ayudarte a aprovechar al máximo agendabee." } }
@@ -201,6 +225,63 @@
     <noscript><img height="1" width="1" style="display:none" alt="facebook pixel"
             src="https://www.facebook.com/tr?id=780474098046322&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://agendabee.com.br/#website",
+            "url": "https://agendabee.com.br/",
+            "name": "agendabee",
+            "inLanguage": [
+                "pt-BR",
+                "en",
+                "es"
+            ],
+            "publisher": {
+                "@id": "https://agendabee.com.br/#organization"
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://agendabee.com.br/es/#webpage",
+            "url": "https://agendabee.com.br/es/",
+            "inLanguage": "es",
+            "name": "agendabee | Programa precios y promociones en Tiendanube",
+            "description": "App de Tiendanube que programa y revierte precios y promociones en la fecha y hora exactas. Configúralo una vez, las bees hacen el resto. Empieza gratis.",
+            "isPartOf": {
+                "@id": "https://agendabee.com.br/#website"
+            },
+            "about": {
+                "@id": "https://agendabee.com.br/#software"
+            },
+            "audience": {
+                "@type": "BusinessAudience",
+                "audienceType": "Comerciantes Tiendanube",
+                "geographicArea": [
+                    {
+                        "@type": "Country",
+                        "name": "AR"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "CL"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "CO"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "MX"
+                    }
+                ]
+            }
+        }
+    ]
+}
+    </script>
 </head>
 
 <body style="position:relative;overflow-x:hidden;touch-action:pan-y" ontouchstart="">
@@ -212,7 +293,7 @@
                     <img src="../assets/img/agendabee-icon.png" alt="agendabee" class="logo-img">
                     <span class="logo-text">agendabee</span>
                 </div>
-                <nav class="nav-menu">
+                <nav class="nav-menu" aria-label="Menú principal">
                     <a href="#recursos" class="nav-link">recursos</a>
                     <a href="#como-funciona" class="nav-link">cómo funciona</a>
                     <a href="#depoimentos" class="nav-link">testimonios</a>
@@ -237,6 +318,7 @@
     </header>
 
     <!-- Hero Section -->
+    <main>
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -249,7 +331,7 @@
                         <a href="https://app.agendabee.com.br/signup"
                             class="btn btn-primary btn-large">
                             <i class="fas fa-rocket"></i>
-                            <span>Prueba Gratis por 3 Días</span>
+                            <span>Comienza Gratis</span>
                         </a>
                         <div class="hero-guarantee">
                             <i class="fas fa-shield-alt"></i>
@@ -272,7 +354,7 @@
                 <div class="hero-visual">
                     <div class="hero-image">
                         <img src="https://firebasestorage.googleapis.com/v0/b/agendabee-prd.appspot.com/o/screenshot-agendabee.png?alt=media&token=2d611bd8-e47c-4c24-8a78-e07b6f359d17"
-                            alt="Interface do agendabee" class="screenshot">
+                            alt="Pantalla de agendabee programando cambios de precios en Tiendanube" class="screenshot">
                         <img class="bee"
                             src="https://firebasestorage.googleapis.com/v0/b/agendabee-prd.appspot.com/o/animated-bee.gif?alt=media&token=3afb467b-0b92-4f20-9442-409405bad54b"
                             alt="Ilustración animada de abeja, mascota de agendabee">
@@ -541,39 +623,110 @@
         <div class="container">
             <div class="section-header">
                 <h2>Empieza hoy mismo</h2>
-                <p>Prueba gratis por 3 días, sin compromiso</p>
+                <p>Elige el plan ideal para tu ritmo de ventas</p>
             </div>
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <div class="price">
-                        <span class="currency">R$</span>
-                        <span class="amount">47</span>
-                        <span class="period">,70/mês</span>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Bee Free</h3>
+                        <div class="price">
+                            <span class="currency">R$</span>
+                            <span class="amount">0</span>
+                        </div>
+                        <div class="trial-badge">
+                            <i class="fas fa-gift"></i>
+                            <span>2 programaciones de bienvenida</span>
+                        </div>
                     </div>
-                    <div class="trial-badge">
-                        <i class="fas fa-gift"></i>
-                        <span>3 días gratis</span>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>2 programaciones gratis, sin fecha de vencimiento</span></li>
+                            <li><i class="fas fa-check"></i> <span>Todos los recursos incluidos</span></li>
+                            <li><i class="fas fa-check"></i> <span>Programación adicional por R$ 17,70</span></li>
+                            <li><i class="fas fa-check"></i> <span>Soporte por correo electrónico</span></li>
+                            <li><i class="fas fa-check"></i> <span>Cancela cuando quieras</span></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="https://app.agendabee.com.br/signup"
+                            class="btn btn-primary btn-large">
+                            <i class="fas fa-rocket"></i>
+                            <span>Comienza Gratis</span>
+                        </a>
+                        <p class="pricing-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Sin tarjeta de crédito</span>
+                        </p>
                     </div>
                 </div>
-                <div class="pricing-features">
-                    <ul>
-                        <li><i class="fas fa-check"></i> <span>Programaciones ilimitadas</span></li>
-                        <li><i class="fas fa-check"></i> <span>Todos los recursos incluidos</span></li>
-                        <li><i class="fas fa-check"></i> <span>Soporte prioritario</span></li>
-                        <li><i class="fas fa-check"></i> <span>Actualizaciones gratuitas</span></li>
-                        <li><i class="fas fa-check"></i> <span>Cancela cuando quieras</span></li>
-                    </ul>
+                <div class="pricing-card pricing-card--featured">
+                    <span class="plan-badge">Más Popular</span>
+                    <div class="pricing-header">
+                        <h3>Bee Pro</h3>
+                        <div class="price">
+                            <span class="currency">R$</span>
+                            <span class="amount">47</span>
+                            <span class="period">,70/mes</span>
+                        </div>
+                        <div class="trial-badge">
+                            <i class="fas fa-gift"></i>
+                            <span>7 programaciones por mes</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>7 programaciones incluidas por mes</span></li>
+                            <li><i class="fas fa-check"></i> <span>Todos los recursos incluidos</span></li>
+                            <li><i class="fas fa-check"></i> <span>Programación adicional por R$ 7,70</span></li>
+                            <li><i class="fas fa-check"></i> <span>Soporte prioritario</span></li>
+                            <li><i class="fas fa-check"></i> <span>Cancela cuando quieras</span></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="https://app.agendabee.com.br/signup"
+                            class="btn btn-primary btn-large">
+                            <i class="fas fa-rocket"></i>
+                            <span>Suscribirse a Bee Pro</span>
+                        </a>
+                        <p class="pricing-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de 30 días • Soporte incluido</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="pricing-cta">
-                    <a href="https://app.agendabee.com.br/signup"
-                        class="btn btn-primary btn-large">
-                        <i class="fas fa-rocket"></i>
-                        <span>Instalar Ahora - 3 Días Gratis</span>
-                    </a>
-                    <p class="pricing-guarantee">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Garantía de 30 días • Soporte incluido</span>
-                    </p>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Bee Max</h3>
+                        <div class="price">
+                            <span class="currency">R$</span>
+                            <span class="amount">77</span>
+                            <span class="period">,70/mes</span>
+                        </div>
+                        <div class="trial-badge">
+                            <i class="fas fa-gift"></i>
+                            <span>Programaciones ilimitadas</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span>Programaciones ilimitadas</span></li>
+                            <li><i class="fas fa-check"></i> <span>Todos los recursos incluidos</span></li>
+                            <li><i class="fas fa-check"></i> <span>Nunca pagas programación adicional</span></li>
+                            <li><i class="fas fa-check"></i> <span>Soporte prioritario</span></li>
+                            <li><i class="fas fa-check"></i> <span>Cancela cuando quieras</span></li>
+                        </ul>
+                    </div>
+                    <div class="pricing-cta">
+                        <a href="https://app.agendabee.com.br/signup"
+                            class="btn btn-primary btn-large">
+                            <i class="fas fa-rocket"></i>
+                            <span>Suscribirse a Bee Max</span>
+                        </a>
+                        <p class="pricing-guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de 30 días • Soporte incluido</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -593,8 +746,10 @@
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Puedes usar todas las funciones de agendabee durante 3 días completos, sin costo alguno. No
-                            se requiere tarjeta de crédito para comenzar.</p>
+                        <p>El plan Bee Free te da 2 programaciones de bienvenida, sin fecha de vencimiento y sin
+                            necesidad de tarjeta de crédito. Si necesitas más volumen, los planes Bee Pro (R$ 47,70/mes,
+                            7 programaciones incluidas) y Bee Max (R$ 77,70/mes, programaciones ilimitadas) están
+                            disponibles.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -641,16 +796,18 @@
                     <a href="https://app.agendabee.com.br/signup"
                         class="btn btn-primary btn-large">
                         <i class="fas fa-rocket"></i>
-                        <span>Comenzar Prueba Gratuita Ahora</span>
+                        <span>Comienza Gratis Ahora</span>
                     </a>
                 </div>
                 <div class="cta-guarantee">
                     <i class="fas fa-shield-alt"></i>
-                    <span>3 días gratis • Sin compromiso • Cancela cuando quieras</span>
+                    <span>2 programaciones gratis • Sin fecha de vencimiento • Cancela cuando quieras</span>
                 </div>
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -685,7 +842,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="footer-year-text"></span> agendabee. Todos los derechos reservados.</p>
-                <img src="../assets/img/partner-tiendanube.png" alt="Tiendanube partners" class="img-partner">
+                <img src="../assets/img/partner-tiendanube.png" alt="Socio oficial de Tiendanube" class="img-partner">
                 <div class="social-links">
                     <a title="instagram agendabee" href="https://instagram.com/agendabee" target="_blank"><i
                             class="fab fa-instagram"></i></a>
