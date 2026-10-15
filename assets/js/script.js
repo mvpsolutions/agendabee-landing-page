@@ -5,24 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
   (function () {
     const path = window.location.pathname;
     const savedLang = localStorage.getItem('language');
+    // Robôs (Googlebot renderiza com en-US e sem localStorage) não podem ser redirecionados,
+    // senão a raiz pt-BR é indexada como /en/
+    const isBot = /bot|crawl|spider|slurp|google|lighthouse|headless/i.test(navigator.userAgent);
     // Redirect only if on the root page and language isn't saved
-    if ((path === '/' || path === '/index.html') && !savedLang) {
+    if ((path === '/' || path === '/index.html') && !savedLang && !isBot) {
       const acceptedLangs = (navigator.languages || [navigator.language]).map(l => l.split('-')[0]);
-      // Se pt aparecer entre os idiomas aceitos do navegador, não redireciona
-      // (evita "sequestrar" visitantes BR com SO/navegador configurado em outro idioma)
-      if (acceptedLangs.includes('pt')) {
-        localStorage.setItem('language', 'pt');
-        return;
-      }
-      const browserLang = acceptedLangs[0];
-      if (browserLang === 'en' || browserLang === 'es') {
-        // Save the preference so it doesn't redirect again
-        localStorage.setItem('language', browserLang);
-        window.location.replace(`/${browserLang}/`);
-      } else {
-        // For other languages (like 'pt'), save the preference so we don't check again
-        localStorage.setItem('language', 'pt');
-      }
+      // pt em qualquer posição → fica na raiz (evita "sequestrar" BR com SO em outro idioma);
+      // es em qualquer posição → /es/; qualquer outro idioma → /en/
+      const lang = acceptedLangs.includes('pt') ? 'pt' : acceptedLangs.includes('es') ? 'es' : 'en';
+      localStorage.setItem('language', lang);
+      if (lang !== 'pt') window.location.replace(`/${lang}/`);
     }
   })();
 
@@ -255,6 +248,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!languageSwitcher.contains(event.target)) {
         languageSwitcher.classList.remove('open');
       }
+    });
+
+    // Escolha manual vence a detecção automática do navegador
+    languageSwitcher.querySelectorAll('a.language-button').forEach(link => {
+      link.addEventListener('click', () => localStorage.setItem('language', link.dataset.lang));
     });
   }
 });
