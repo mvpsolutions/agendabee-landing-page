@@ -10,8 +10,8 @@ agendabee automatiza cambios programados de precios y promociones para tiendas T
 
 - Nome do produto / Product name: agendabee (sempre minúsculo / always lowercase)
 - Categoria: SaaS de automação de e-commerce para Nuvemshop/Tiendanube
-- Planos / Plans / Planes: Bee Free (R$ 0, 2 agendamentos de boas-vindas sem prazo de expiração), Bee Pro (R$ 47,70/mês, 7 agendamentos inclusos), Bee Max (R$ 77,70/mês, agendamentos ilimitados) — BRL, cobrança mensal nos planos pagos
-- Teste gratuito / Free trial / Prueba gratuita: plano Bee Free, 2 agendamentos de boas-vindas sem prazo de expiração, sem cartão de crédito necessário
+- Planos / Plans / Planes: Bee Free (R$ 0, 2 agendamentos de boas-vindas sem prazo de expiração + 1 agendamento grátis por mês a partir do 2º mês), Bee Pro (R$ 47,70/mês, 7 agendamentos inclusos), Bee Max (R$ 77,70/mês, agendamentos ilimitados) — BRL, cobrança mensal nos planos pagos
+- Teste gratuito / Free trial / Prueba gratuita: plano Bee Free, 2 agendamentos de boas-vindas sem prazo de expiração + 1 por mês a partir do 2º mês, sem cartão de crédito necessário
 - Garantia / Guarantee / Garantía: 30 dias
 - Plataformas suportadas: Nuvemshop (Brasil) e Tiendanube (Argentina, Chile, Colômbia, México) — mesma plataforma de e-commerce, nomes distintos por país
 - Avaliação / Rating: 4.8/5, mais de 25 lojistas avaliaram (até a data de publicação deste arquivo — não tratar como número fixo permanente)

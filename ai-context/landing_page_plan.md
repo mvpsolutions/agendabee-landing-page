@@ -23,7 +23,7 @@ Lojistas da Nuvemshop que buscam otimizar a gestão de preços e promoções, au
 
 - **Título Impactante:** Gatilho de dor/solução. Ex: "Automatize suas promoções na Nuvemshop e veja suas vendas decolarem."
 - **Subtítulo:** Benefício claro e conciso. Ex: "Agende alterações de preços e promoções com facilidade, economize tempo e maximize seus lucros."
-- **Chamada para Ação (CTA) Principal:** Botão proeminente. Ex: "Experimente Grátis por 3 Dias" ou "Comece Agora".
+- **Chamada para Ação (CTA) Principal:** Botão proeminente. Ex: "Comece Grátis no Bee Free" ou "Comece Agora".
 - **Imagem/Vídeo de Fundo:** Visual atraente e relevante (ex: interface do agendabee, gráfico de vendas subindo, abelhas trabalhando).
 - **Prova Social (Opcional):** Pequeno texto com depoimento ou número de usuários/lojas impactadas.
 
@@ -54,7 +54,7 @@ Lojistas da Nuvemshop que buscam otimizar a gestão de preços e promoções, au
 
 ### 4.6. Seção de Preços/Planos (Se aplicável, ou CTA para teste grátis)
 
-- **Plano de Teste Grátis:** Reforçar a oferta de 3 dias grátis.
+- **Plano de Teste Grátis:** Reforçar a entrada grátis pelo Bee Free (2 agendamentos de boas-vindas + 1 por mês, sem cartão).
 - **CTA Secundário:** Ex: "Ver Planos" (se houver planos pagos detalhados).
 
 ### 4.7. Seção de Perguntas Frequentes (FAQ - Opcional)
@@ -79,7 +79,7 @@ Lojistas da Nuvemshop que buscam otimizar a gestão de preços e promoções, au
 - **Benefício vs. Característica:** Focar no que o lojista ganha, não apenas no que o software faz.
 - **Dor vs. Prazer:** Abordar a dor de gerenciar preços manualmente e o prazer da automação.
 - **Exclusividade/Oportunidade:** "A ferramenta que seus concorrentes ainda não descobriram."
-- **Garantia/Risco Zero:** Teste grátis de 3 dias.
+- **Garantia/Risco Zero:** Bee Free gratuito, sem cartão; troca ou cancelamento de plano a qualquer momento.
 
 ## 6. Boas Práticas e Clean Code
 

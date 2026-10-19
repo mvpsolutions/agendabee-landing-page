@@ -39,7 +39,7 @@ Landing page estratégica e persuasiva para o agendabee, desenvolvida com HTML, 
 - **Prova Social**: Depoimentos, avaliações 4.8/5, "25+ lojistas satisfeitos"
 - **Benefício vs. Característica**: Foco no que o lojista ganha
 - **Dor vs. Prazer**: Contraste entre manual vs. automático
-- **Garantia**: Teste grátis de 3 dias, sem compromisso
+- **Garantia**: Bee Free gratuito (2 agendamentos de boas-vindas + 1 por mês), sem cartão e sem compromisso
 - **Exclusividade**: "A ferramenta que seus concorrentes ainda não descobriram"
 
 ### Funcionalidades JavaScript
