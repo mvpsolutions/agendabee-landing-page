@@ -1178,3 +1178,36 @@ footer .logo-text {
     transform: translateX(0px) translateY(0px) scale(1);
   }
 }
+
+/* Banner de consentimento de cookies (assets/js/analytics.js) */
+.cookie-consent-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2000;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  background: var(--white);
+  color: var(--gray-800);
+  border: 1px solid var(--gray-300);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-size: var(--font-size-sm);
+}
+
+.cookie-consent-banner p {
+  flex: 1 1 280px;
+  margin: 0;
+}
+
+.cookie-consent-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}

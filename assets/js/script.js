@@ -162,23 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(el);
   });
 
-  // CTA button tracking (for analytics)
-  const ctaButtons = document.querySelectorAll('.btn-primary');
-  ctaButtons.forEach(button => {
-    button.addEventListener('click', function () {
-      const buttonText = this.textContent.trim();
-      const section = this.closest('section')?.className || 'unknown';
-
-      // Google Analytics event (if gtag is available)
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'cta_click', {
-          'button_text': buttonText,
-          'section': section,
-          'page_location': window.location.href
-        });
-      }
-    });
-  });
+  // Eventos de analytics (cta_click, click_install, view_item): assets/js/analytics.js
 
   // Lazy loading for images
   const images = document.querySelectorAll('img[data-src]');
