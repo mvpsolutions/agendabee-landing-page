@@ -1212,12 +1212,14 @@ footer .logo-text {
   margin-left: auto;
 }
 
-/* Botão flutuante do WhatsApp (conversa iniciada pelo cliente: gratuita na Meta) */
+/* Botão flutuante do WhatsApp (conversa iniciada pelo cliente: gratuita na Meta).
+   Mesma coluna do .scroll-to-top (script.js: bottom/right 2rem, 50px), logo acima dele:
+   centros alinhados (2rem + 25px - 28px) e 12px de folga. */
 .whatsapp-float {
   position: fixed;
-  right: 20px;
-  bottom: calc(20px + env(safe-area-inset-bottom));
-  z-index: 1500;
+  right: calc(2rem - 3px);
+  bottom: calc(2rem + 62px + env(safe-area-inset-bottom));
+  z-index: 1000;
   width: 56px;
   height: 56px;
   display: flex;
@@ -1235,14 +1237,4 @@ footer .logo-text {
 .whatsapp-float:hover {
   transform: scale(1.06);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-}
-
-@media (max-width: 480px) {
-  .whatsapp-float {
-    right: 16px;
-    bottom: calc(16px + env(safe-area-inset-bottom));
-    width: 52px;
-    height: 52px;
-    font-size: 28px;
-  }
 }
