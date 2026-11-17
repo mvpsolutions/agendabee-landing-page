@@ -157,7 +157,9 @@
       var link = event.target.closest('a[href]');
       if (!link) return;
       var href = link.href;
-      if (APP_STORE.test(href)) {
+      if (href.indexOf('https://wa.me/') === 0) {
+        track('contact_whatsapp', { section: link.classList.contains('whatsapp-float') ? 'float' : sectionOf(link) });
+      } else if (APP_STORE.test(href)) {
         track('click_install', { link_url: href.split('?')[0], section: sectionOf(link) });
       } else if (href.indexOf('https://app.agendabee.com.br/') === 0) {
         var destination = new URL(href).pathname.replace(/^\//, '') || 'app';
